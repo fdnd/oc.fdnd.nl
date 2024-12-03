@@ -32,18 +32,23 @@
     }
 
     main{
-    }
+      pointer-events: auto;
+    }  
     header{
       position: sticky;
-      z-index: -100;
+      z-index: -1;
       top: 1rem;
+      width: calc(95vw);
+      /* background: pink; */
+      overflow-y: hidden;
     }    
     h1{
       color: #66e5bf;
       margin: 1rem 0;
       font-size: 3rem;
-      font-size: 16vw;
+      font-size: 14vw;
       font-weight: 600;
+      letter-spacing: -1vw;
       line-height: .8;    
     }
     header p{
@@ -51,12 +56,15 @@
     }
 
     article{
+      position: relative;
       max-width: 35em;
       margin: 3rem 0;
       padding: 1rem;
       border-radius: .5rem;
       color: #050542;
       background-color: #66e5bf;
+      pointer-events: inherit;
+      
     }
     h2{
       color: #050542;
@@ -92,10 +100,10 @@
       <h2>Contact en leden OC FDND</h2>
       <p>De opleidingscommissie van FDND bestaat uit de leden:</p>
       <ol>
-        <li><a href="mailto:stefan.van.der.kort@hva.nl">Stefan van der Kort</a> (student) - Voorzitter</li>
-        <li><a href="mailto:b.zekaj@hva.nl">Berat Zekaj</a> (docent) - Secretaris</li>
+        <li><a href="mailto:zoe.penner@hva.nl">Zoë Penner</a> (student) - Voorzitter</li>
+        <li><a href="mailto:clarice.boerlijst@hva.nl">Clarice Boerlijst</a> (Student) - Secretaris</li>
         <li>Koop Reynders (docent)</li>
-        <li>-vacant- (student)</li>        
+        <li>-vacant- (docent)</li>
       </ol>
       <p>De voorzitter en secretaris zijn te mailen voor vragen, maar ook makkelijk bereikbaar op Teams.</p>
 
