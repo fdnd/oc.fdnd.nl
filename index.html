@@ -8,31 +8,36 @@
 
   <style>
     body {
-      color: #fff;
-      background-color: #050542;
-      font-family: Open Sans,sans-serif;
+      --white: #fff;
+      --offwhite: #EFEFEF;
+      --green: #66e5bf;
+      --blue: #050542;
+      --yellow: #FFFC86;
+      --purple: #A675F5;
+      
+      color: var(--offwhite);
+      background-color: var(--blue);
+      font-family: Helvetica, sans-serif;
       font-size: 1.2em;
-      margin: 2em 1em; /* margin: 2em; */
-    }
+      line-height: 150%;
+      margin: 2rem 0 0 1rem;
 
-    @media (min-width: 30em) {
-      body{
-        margin: 3em 2em;
+      @media (min-width: 30em) {
+        margin: 3rem 0 0 2rem; 
       }
     }
 
     a {
-      color: #fff;  
-    }
+      color: #fff;
 
-    a:hover {
-      background-color:#fff;
-      color: #050542;
-    }
-
-    a:focus {
-      background-color:#fffc86;
-      color: #050542;
+      &:hover {
+        background-color:var(--white);
+        color: var(--blue);
+        }
+      &:focus {
+        background-color:var(--yellow);
+        color: var(--blue);
+        }
     }
 
     main {
@@ -44,64 +49,65 @@
     header {
       position: sticky;
       z-index: 1;
-      top: 0rem;
-      width: calc(95vw);
+      top: 2rem;
       contain:paint;
       container-type: inline-size;
-    }    
 
-    h1 {
-      color: #66e5bf;
-      margin: 0 0 1rem;
-      font-size: 3rem;
-      font-size: clamp(3rem, 22vw, 15rem);
-      font-weight: 600;
-      letter-spacing: -1vw;
-      line-height: .8; 
-      overflow: hidden;
-
-      @container (min-width: 45em) {
-        max-width:75rem;
+      @media (min-width: 30em) {
+        top: 3rem; 
       }
-    }
 
+      & h1 {
+        color: var(--green);
+        margin: 0;
+        font-size: 10em;
+        /* font-size: clamp(3rem, 22vw, 15rem); */
+        font-size: 22vw;
+        font-weight: 600;
+        letter-spacing: -1vw;
+        line-height: .8; 
+        overflow: hidden;
 
-
-    header p {
-      max-width: 35em;
-    }
-
+        @container (min-width: 45em) {
+          /* max-width:75rem; */
+        }
+      }
+      & p {
+        max-width: 32em;
+        margin: 2rem 0;
+      }
+    }    
+  
     article {
       position: relative;
-      z-index:20;
-      max-width: 35em;
-      margin: 3rem 0 6rem 0;  
+      z-index:2;
+      max-width: calc(32em - 2em);
+      margin: 2rem 0 8rem 0; 
       padding: 1rem;
       border-radius: .5rem;
-      color: #050542;
-      background-color: #66e5bf;
+      color: var(--blue);
+      background-color: var(--green);
       transform: translate3d(0,0,0);
-    }
 
-    h2 {
-      color: #050542;
-      margin: 1rem 0;
-      font-size: 2rem;
-      font-weight: 600;
-    }
+      & h2 {
+        color: var(--blue);
+        margin: 1rem 0;
+        font-size: 2rem;
+        font-weight: 600;
+      }
+      & li {
+        margin-bottom: 0.2rem;
+      }
+      & a {
+        color: var(--blue);
 
-    li {
-      margin-bottom: 0.2rem;
+        &:hover{
+          background-color:var(--blue);
+          color: var(--white);
+        }
+      }
     }
-
-    article a {
-      color: #050542;  
-    }
-
-    article a:hover{
-      background-color:#050542;
-      color: #fff;
-    }
+    
   </style>
 </head>
 
@@ -110,7 +116,7 @@
     <header>
       <h1>Opleidings&shy;commissie FDND</h1>
       <p>Elke opleiding heeft een Opleidingscommissie (OC) die de kwaliteit van de opleiding bewaakt. De OC bestaat uit studenten en docenten (50/50) en is officieel een medezeggenschapsorgaan.</p>
-      <p>Lees hier <a href="https://www.hva.nl/praktisch/algemeen/faculteiten/fmr/opleidingscommissies/opleidingscommissies-fmr.html">meer over de opleidingscommissie</a> op de website van de HvA.</p>
+      <p>Lees <a href="https://www.hva.nl/praktisch/algemeen/faculteiten/fmr/opleidingscommissies/opleidingscommissies-fmr.html">meer over de opleidingscommissie</a> op de website van de HvA.</p>
     </header>
     
     <article>
