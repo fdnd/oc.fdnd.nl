@@ -7,6 +7,12 @@
   <meta name="description" content="Opleidingscommisie van de HBO opleiding voor Frontend design en development in Amsterdam.">
 
   <style>
+    @media (prefers-reduced-motion: no-preference) { 
+      html {
+        scroll-behavior: smooth;
+      }
+    }
+
     body {
       --white: #fff;
       --offwhite: #EFEFEF;
@@ -25,6 +31,8 @@
       @media (min-width: 30em) {
         margin: 3rem 0 0 2rem; 
       }
+
+      
     }
 
     a {
@@ -61,20 +69,21 @@
         color: var(--green);
         margin: 0;
         font-size: 10em;
-        /* font-size: clamp(3rem, 22vw, 15rem); */
-        font-size: 22vw;
+        font-size: clamp(3rem, 22vw, 15rem);
+        /* font-size: 22vw; */
         font-weight: 600;
         letter-spacing: -1vw;
         line-height: .8; 
         overflow: hidden;
 
         @container (min-width: 45em) {
-          /* max-width:75rem; */
+          max-width:75rem;
         }
       }
       & p {
         max-width: 32em;
         margin: 2rem 0;
+        padding-right: 2rem;
       }
     }    
   
@@ -82,7 +91,7 @@
       position: relative;
       z-index:2;
       max-width: calc(32em - 2em);
-      margin: 2rem 0 8rem 0; 
+      margin: 2rem 0 4rem 0; 
       padding: 1rem;
       border-radius: .5rem;
       color: var(--blue);
@@ -115,12 +124,13 @@
   <main>
     <header>
       <h1>Opleidings&shy;commissie FDND</h1>
-      <p>Elke opleiding heeft een Opleidingscommissie (OC) die de kwaliteit van de opleiding bewaakt. De OC bestaat uit studenten en docenten (50/50) en is officieel een medezeggenschapsorgaan.</p>
+      <p>Elke opleiding heeft een Opleidingscommissie (OC) die de kwaliteit van de opleiding bewaakt. 
+        De OC bestaat uit <a href="#leden-oc-fdnd">studenten en docenten</a> en is officieel een medezeggenschapsorgaan.</p>
       <p>Lees <a href="https://www.hva.nl/praktisch/algemeen/faculteiten/fmr/opleidingscommissies/opleidingscommissies-fmr.html">meer over de opleidingscommissie</a> op de website van de HvA.</p>
     </header>
     
-    <article>
-      <h2>Contact en leden OC FDND</h2>
+    <article id="leden-oc-fdnd">
+      <h2>Leden OC FDND en contact</h2>
       <p>De opleidingscommissie van FDND bestaat uit de leden:</p>
       <ol>
         <li><a href="mailto:zoe.penner@hva.nl">Zoë Penner</a> (student) - Voorzitter</li>
