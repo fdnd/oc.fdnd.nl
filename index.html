@@ -38,28 +38,34 @@
     main {
       position: relative;
       z-index:1;
-      contain: layout;
+      contain:paint;
     }
 
     header {
       position: sticky;
       z-index: 1;
-      top: 1rem;
+      top: 0rem;
       width: calc(95vw);
       contain:paint;
+      container-type: inline-size;
     }    
 
     h1 {
       color: #66e5bf;
-      margin: 1rem 0;
+      margin: 0 0 1rem;
       font-size: 3rem;
-      font-size: 22vw;
+      font-size: clamp(3rem, 22vw, 15rem);
       font-weight: 600;
       letter-spacing: -1vw;
       line-height: .8; 
-      /* contain:paint; */
-      overflow:hidden;
+      overflow: hidden;
+
+      @container (min-width: 45em) {
+        max-width:75rem;
+      }
     }
+
+
 
     header p {
       max-width: 35em;
