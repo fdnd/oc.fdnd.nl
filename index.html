@@ -7,94 +7,104 @@
   <meta name="description" content="Opleidingscommisie van de HBO opleiding voor Frontend design en development in Amsterdam.">
 
   <style>
-    body{
+    body {
       color: #fff;
       background-color: #050542;
       font-family: Open Sans,sans-serif;
       font-size: 1.2em;
       margin: 2em 1em; /* margin: 2em; */
     }
+
     @media (min-width: 30em) {
       body{
         margin: 3em 2em;
       }
-}
-    a{
+    }
+
+    a {
       color: #fff;  
     }
-    a:hover{
+
+    a:hover {
       background-color:#fff;
       color: #050542;
     }
-    a:focus{
+
+    a:focus {
       background-color:#fffc86;
       color: #050542;
     }
 
-    main{
-      pointer-events: auto;
-    }  
-    header{
+    main {
+      position: relative;
+      z-index:1;
+      contain: layout;
+    }
+
+    header {
       position: sticky;
-      z-index: -1;
+      z-index: 1;
       top: 1rem;
       width: calc(95vw);
-      /* background: pink; */
-      overflow-y: hidden;
+      contain:paint;
     }    
-    h1{
+
+    h1 {
       color: #66e5bf;
       margin: 1rem 0;
       font-size: 3rem;
       font-size: 22vw;
       font-weight: 600;
       letter-spacing: -1vw;
-      line-height: .8;    
+      line-height: .8; 
+      /* contain:paint; */
+      overflow:hidden;
     }
-    header p{
+
+    header p {
       max-width: 35em;
     }
 
-    article{
+    article {
       position: relative;
+      z-index:20;
       max-width: 35em;
-      margin: 3rem 0 6rem 0;
-
+      margin: 3rem 0 6rem 0;  
       padding: 1rem;
       border-radius: .5rem;
       color: #050542;
       background-color: #66e5bf;
-      pointer-events: inherit;
-      
+      transform: translate3d(0,0,0);
     }
-    h2{
+
+    h2 {
       color: #050542;
       margin: 1rem 0;
       font-size: 2rem;
       font-weight: 600;
     }
-    li{
+
+    li {
       margin-bottom: 0.2rem;
     }
-    article a{
+
+    article a {
       color: #050542;  
     }
+
     article a:hover{
       background-color:#050542;
       color: #fff;
     }
-
   </style>
 </head>
+
 <body>
-
   <main>
-
     <header>
       <h1>Opleidings&shy;commissie FDND</h1>
       <p>Elke opleiding heeft een Opleidingscommissie (OC) die de kwaliteit van de opleiding bewaakt. De OC bestaat uit studenten en docenten (50/50) en is officieel een medezeggenschapsorgaan.</p>
-      <p>Lees hier <a href="https://www.hva.nl/praktisch/algemeen/faculteiten/fmr/opleidingscommissies/opleidingscommissies-fmr.html
-">meer over de opleidingscommissie</a> op de website van de HvA.</p>
+      <p>Lees hier <a href="https://www.hva.nl/praktisch/algemeen/faculteiten/fmr/opleidingscommissies/opleidingscommissies-fmr.html">meer over de opleidingscommissie</a> op de website van de HvA.</p>
     </header>
     
     <article>
@@ -113,9 +123,7 @@
         <li><a href="download/Jaarverslag-2122-FDND.pdf">Download Jaarverslag 2021-2022</a></li>
         <li><a href="download/Jaarverslag-2223-FDND.pdf">Download Jaarverslag 2022-2023</a></li>
       </ul>
-      
     </article>
-    
   </main>
 
 </body>
